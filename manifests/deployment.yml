@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: tobyreidpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: tobyreidpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: tobyreidpipelinesjavascriptdocker 
+          image: serpico.azurecr.io/tobyreidpipelinesjavascriptdocker 
+          ports:
+          - containerPort: 8080
